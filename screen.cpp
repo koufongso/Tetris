@@ -22,7 +22,7 @@ void Screen::clear() {
 void Screen::draw(wchar_t* &field) {
 	SetConsoleActiveScreenBuffer(myScreen);
 	DWORD out = 0;
-	WriteConsoleOutputCharacter(myScreen, field, width * height, { 0,0 }, &out);
+	WriteConsoleOutputCharacterW(myScreen, field, width * height, { 0,0 }, &out);
 }
 
 
